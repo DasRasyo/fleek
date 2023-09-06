@@ -200,6 +200,19 @@ echo
 printf "🤖 Check if operating system is supported\n"
 isOSSupported
 
+echo -e "\033[38;5;205m⚠️Starting with Packages update and Dependencies Inslall⚠️\033[0m"
+sleep 5
+
+sudo apt update && apt upgrade -y && sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential \
+git make ncdu -y 
+sleep 5
+sudo apt-get install build-essential
+sleep 2
+sudo apt-get install build-essential cmake clang pkg-config libssl-dev gcc-multilib -y
+sleep 2
+sudo apt-get install protobuf-compiler -y
+sleep 5
+
 (
   exec < /dev/tty;
 
